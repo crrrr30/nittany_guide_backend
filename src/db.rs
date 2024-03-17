@@ -96,7 +96,7 @@ impl Database {
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
-pub struct DocumentId([u8; 32]);
+pub struct DocumentId(pub [u8; 32]);
 
 impl AsRef<[u8; 32]> for DocumentId {
     fn as_ref(&self) -> &[u8; 32] {
